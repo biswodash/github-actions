@@ -35,6 +35,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          path=`pwd`
+          echo $path
           uname -a >test.txt
           df -h >> test.txt
           pwd >> test.txt
@@ -42,7 +44,7 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: output file
-          path: public/
+          path: $path/test.txt
           
       # upload artifacts
   

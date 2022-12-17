@@ -24,6 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: actions/upload-artifact@master
+        with:
+          name: output file
+          path: public/
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -38,3 +42,7 @@ jobs:
           df -h >> test.txt
           pwd >> test.txt
           echo "Testing the workflow">> test.txt
+          
+      # upload artifacts
+  
+      

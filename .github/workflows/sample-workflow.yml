@@ -35,6 +35,8 @@ jobs:
         run: |
           ls -lrt
           pwd
+          whoami
+          chmod 777 *
           ./script_test.sh
      
   
